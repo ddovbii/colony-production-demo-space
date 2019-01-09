@@ -10,7 +10,7 @@ inputs:
 - API_PORT: 5001
 - RELEASE_NUMBER: none
 - API_BUILD_NUMBER: none
-- NETWORK_ID
+- NETWORK_ID: promotions-manager-prod/prod-vnet
 
 artifacts:
 - promotions-manager-ui:
