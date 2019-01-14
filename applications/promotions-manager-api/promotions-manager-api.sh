@@ -20,6 +20,7 @@ echo '==> Set the DATABASE_HOST env var to be globally available'
 echo 'DATABASE_HOST='$DATABASE_HOST >> /etc/environment
 echo 'RELEASE_NUMBER='$RELEASE_NUMBER >> /etc/environment
 echo 'API_BUILD_NUMBER='$API_BUILD_NUMBER >> /etc/environment
+echo 'API_PORT='$API_PORT >> /etc/environment
 source /etc/environment
 
 echo '==> Install PM2, it provides an easy way to manage and daemonize nodejs applications'
@@ -29,3 +30,6 @@ pm2 startup systemd
 echo '==> Start our api as a daemon'
 cd /var/promotions-manager-api
 pm2 start index.js
+
+# run it again just in case
+pm2 startup
