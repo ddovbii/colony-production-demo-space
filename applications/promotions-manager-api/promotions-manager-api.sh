@@ -25,11 +25,9 @@ source /etc/environment
 
 echo '==> Install PM2, it provides an easy way to manage and daemonize nodejs applications'
 npm install -g pm2
-pm2 startup systemd
 
-echo '==> Start our api as a daemon'
+echo '==> Start our api and configure as a daemon using pm2'
 cd /var/promotions-manager-api
 pm2 start index.js
-
-# run it again just in case
-pm2 startup
+pm2 save
+sudo su -c "env PATH=$PATH:/home/unitech/.nvm/versions/node/v4.3/bin pm2 startup systemd -u root --hp /home/root"
