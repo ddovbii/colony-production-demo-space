@@ -30,4 +30,5 @@ echo '==> Start our api and configure as a daemon using pm2'
 cd /var/promotions-manager-api
 pm2 start index.js
 pm2 save
+mv /root/.pm2/dump.pm2 /home/root/.pm2/dump.pm2
 sudo su -c "env PATH=$PATH:/home/unitech/.nvm/versions/node/v4.3/bin pm2 startup systemd -u root --hp /home/root"
