@@ -19,10 +19,10 @@ configuration:
   initialization:
     script: My-eCommerce-App-ui.sh
   healthcheck:
-    timeout:  1000
+    timeout: 1000
     wait_for_ports: $PORT
 source:
-  image:     
+  image:
     azure_image:
     - urn: Canonical:UbuntuServer:16.04-LTS:latest
       username: adminuser
