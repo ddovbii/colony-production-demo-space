@@ -1,5 +1,5 @@
 #!/bin/bash
-echo '=============== Staring init script for Promotions Manager UI ==============='
+echo '=============== Staring init script for My-eCommerce-App UI ==============='
 
 # save all env for debugging
 printenv > /var/log/colony-vars-"$(basename "$BASH_SOURCE" .sh)".txt

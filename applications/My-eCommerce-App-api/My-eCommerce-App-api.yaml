@@ -17,9 +17,9 @@ infrastructure:
         vm_size: $AZURE_VM_SIZE
 configuration:
   start:
-    script: promotions-manager-api-command.sh
+    script: My-eCommerce-App-api-command.sh
   initialization:
-    script: promotions-manager-api.sh
+    script: My-eCommerce-App-api.sh
   healthcheck:
     timeout: 1000
     wait_for_ports: $API_PORT

@@ -15,17 +15,17 @@ infrastructure:
         vm_size: $AZURE_VM_SIZE
 configuration:
   start:
-    script: promotions-manager-ui-command.sh
+    script: My-eCommerce-App-ui-command.sh
   initialization:
-    script: promotions-manager-ui.sh
+    script: My-eCommerce-App-ui.sh
   healthcheck:
-    timeout: 1000
+    timeout:  1000
     wait_for_ports: $PORT
 source:
-  image:    
+  image:     
     azure_image:
     - urn: Canonical:UbuntuServer:16.04-LTS:latest
-      username: adminuser
+      usernam e: adminuser
   os_type: linux
 spec_version: 1
 debugging: 

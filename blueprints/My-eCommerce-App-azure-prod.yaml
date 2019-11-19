@@ -13,16 +13,16 @@ inputs:
 - NETWORK_ID: promotions-manager-prod/prod-vnet
 
 artifacts:
-- promotions-manager-ui:
-- promotions-manager-api:
+- My-eCommerce-App-ui:
+- My-eCommerce-App-api:
 
 applications:
-- promotions-manager-ui:  
+- My-eCommerce-App-ui:  
     input_values:
     - PORT: $PORT
     - AZURE_VM_SIZE: $AZURE_VM_SIZE
     - API_PORT: $API_PORT
-- promotions-manager-api:
+- My-eCommerce-App-api:
     input_values:
     - API_PORT: $API_PORT
     - AZURE_VM_SIZE: $AZURE_VM_SIZE
