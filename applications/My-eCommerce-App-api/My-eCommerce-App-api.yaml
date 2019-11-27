@@ -21,7 +21,7 @@ configuration:
   initialization:
     script: My-eCommerce-App-api.sh
   healthcheck:
-    timeout: 1
+    timeout: 1000
     wait_for_ports: $API_PORT
 source:
   image:    
