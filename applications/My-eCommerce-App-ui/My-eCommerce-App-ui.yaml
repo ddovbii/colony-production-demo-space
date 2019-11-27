@@ -19,7 +19,7 @@ configuration:
   initialization:
     script: My-eCommerce-App-ui.sh
   healthcheck:
-    timeout: 1
+    timeout: 1000
     wait_for_ports: $PORT
 source:
   image:
